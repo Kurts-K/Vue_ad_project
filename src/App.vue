@@ -29,7 +29,9 @@
             @click="drawer = !drawer"
             class="hidden-md-and-up"
       ></v-toolbar-side-icon>
-      <v-toolbar-title>Ad application</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link to="/" tag="span" class="pointer">Ad application</router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
@@ -70,4 +72,10 @@ export default {
   }
 
 }
-</script>
+</script scoped>
+
+<style>
+  .pointer {
+    cursor: pointer;
+  }
+</style>
