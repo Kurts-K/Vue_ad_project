@@ -1,12 +1,12 @@
 <template>
     <v-container>
         <v-layout row>
-            <v-flex xs12 xm6 offset-sm3>
+            <v-flex xs12 sm6 offset-sm3>
                 <h1 class="text--secondary mb-3">My ads</h1>
 
                 <v-card
-                        class="evalation-10 mb-5"
-                        v-for="ad in ads"
+                        class="evalation-10 mb-3"
+                        v-for="ad in myAds"
                         :key="ad.id"
 
                 >
@@ -43,19 +43,10 @@
 
 <script>
     export default {
-        data() {
-            return {
-                ads: [
-                    {
-                        title: 'First Ad',
-                        description: 'Hello i am description',
-                        promo: false,
-                        imageSrc: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-                        id: '3',
-                    }
-                    ]
-
-            }
-        }
+     computed: {
+         myAds() {
+             return this.$store.getters.myAds
+         }
+     }
     }
 </script>
