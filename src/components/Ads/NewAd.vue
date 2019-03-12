@@ -79,9 +79,10 @@
                         title: this.title,
                         description: this.description,
                         promo: this.promo,
+                        imageSrc: 'https://artemdemo.me/wp-content/uploads/2016/10/Vuejs-logo-300x208.png'
 
                     }
-                    console.log(ad);
+                    this.$store.dispatch('createAd', ad)
                 }
             }
         }
